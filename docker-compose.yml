@@ -1,0 +1,23 @@
+services:
+  jupyter-notebook:
+    image: jupyter/datascience-notebook
+    volumes:
+      - juptyer_datasets:/home/jovyan/work/datasets
+    ports:
+      - 8888:8888
+    restart: always
+    x-tinkr:
+      load_balancer:
+        tenancy: dedicated
+        type: webserver
+        healthcheck:
+          timeout: 10
+          healthy-threshold: 3
+          unhealthy-threshold: 5
+          port: 8888
+          path: /
+          interval: 120
+    container_name: jupyter_notebook
+
+volumes:
+  juptyer_datasets:
