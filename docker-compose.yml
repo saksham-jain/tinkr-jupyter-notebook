@@ -3,6 +3,7 @@ services:
     image: jupyter/datascience-notebook
     volumes:
       - juptyer_datasets:/home/jovyan/work/datasets
+    platform: linux/amd64
     ports:
       - 8888:8888
     restart: always
