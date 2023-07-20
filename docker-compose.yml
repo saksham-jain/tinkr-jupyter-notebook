@@ -1,5 +1,5 @@
 services:
-  jn:
+  jupyter-notebook:
     image: jupyter/datascience-notebook
     volumes:
       - juptyer_datasets:/home/jovyan/work/datasets
