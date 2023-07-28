@@ -9,7 +9,7 @@ services:
     restart: always
     x-tinkr:
       load_balancer:
-        tenancy: shared
+        tenancy: dedicated
         type: webserver
         healthcheck:
           timeout: 10
