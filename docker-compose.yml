@@ -8,6 +8,8 @@ services:
       - 8888:8888
     restart: always
     x-tinkr:
+      cpu: 512
+      memory: 512
       load_balancer:
         tenancy: dedicated
         type: webserver
