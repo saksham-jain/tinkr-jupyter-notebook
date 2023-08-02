@@ -1,17 +1,18 @@
 services:
   jn:
-    image: jupyter/datascience-notebook
+    image: jn-collab
+    build: .
+    platform: linux/amd64
     volumes:
-      - juptyer_datasets:/home/jovyan/work/datasets
-    # platform: linux/amd64
+      - juptyer_datasets:/home/project/work
     ports:
-      - 8888:8888
+      - 10000:8888
     restart: always
     x-tinkr:
       cpu: 512
       memory: 512
       load_balancer:
-        tenancy: dedicated
+        tenancy: shared
         type: webserver
         healthcheck:
           timeout: 10
@@ -20,7 +21,7 @@ services:
           port: 8888
           path: /
           interval: 120
-    container_name: jupyter_notebook
+    container_name: jn
 
 volumes:
   juptyer_datasets:
