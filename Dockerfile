@@ -1,4 +1,4 @@
-FROM --platform=linux/amd64 python:3-bullseye AS jn
+FROM python:3-bullseye AS jn
 
 WORKDIR /home/project
 

@@ -7,7 +7,7 @@ services:
     volumes:
       - juptyer_datasets:/home/project/work
     ports:
-      - 10000:8888
+      - 8888:8888
     restart: always
     x-tinkr:
       cpu: 512
