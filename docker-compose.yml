@@ -2,6 +2,7 @@ services:
   jn:
     build:  
       context: .
+      target: jn
     platform: linux/amd64
     volumes:
       - juptyer_datasets:/home/project/work
