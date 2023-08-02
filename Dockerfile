@@ -11,3 +11,5 @@ RUN pip install notebook
 RUN pip install jupyter_collaboration
 
 CMD jupyter lab --collaborative --allow-root --ip="0.0.0.0"
+
+

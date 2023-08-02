@@ -1,6 +1,5 @@
 services:
   jn:
-    image: jn-collab
     build: .
     platform: linux/amd64
     volumes:
