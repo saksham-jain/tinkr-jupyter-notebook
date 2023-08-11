@@ -11,7 +11,7 @@ services:
     restart: always
     x-tinkr:
       cpu: 512
-      memory: 512
+      memory: 1024
       load_balancer:
         tenancy: shared
         type: webserver
