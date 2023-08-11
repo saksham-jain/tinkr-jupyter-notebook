@@ -11,7 +11,7 @@ services:
     restart: always
     x-tinkr:
       cpu: 512
-      memory: 1024
+      memory: 512
       load_balancer:
         tenancy: shared
         type: webserver
@@ -22,6 +22,7 @@ services:
           port: 8888
           path: /
           interval: 120
+          success_code: "301-302"
     container_name: jn
 
 volumes:
