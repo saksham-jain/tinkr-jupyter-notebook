@@ -23,7 +23,7 @@ services:
           path: /
           interval: 120
           success_code: "301-302"
-    container_name: jnnn
+    container_name: jn
 
 volumes:
   juptyer_datasets:
